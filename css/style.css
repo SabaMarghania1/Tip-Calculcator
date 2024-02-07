@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Space Mono", "sans-serif";
+  background-color: #c5e4e7;
+}
+
+button {
+  cursor: pointer;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  margin: 50px auto 40px;
+}
+
+.calculator {
+  width: 100%;
+  background-color: white;
+  border-radius: 25px 25px 0 0;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.label {
+  margin-bottom: 6px;
+  color: #5e7a7d;
+}
+
+input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  background-color: #f3f9fa;
+  text-align: right;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 11px 16px;
+  background-position: center left 20px;
+  font-weight: bold;
+}
+
+.bill input {
+  background-image: url("/images/icon-dollar.svg");
+}
+
+.bill input:hover,
+.bill input:active {
+  outline: 2px solid #26c2ae;
+}
+.people input {
+  background-image: url("/images/icon-person.svg");
+}
+.tip {
+  margin: 32px 0;
+}
+
+.tips-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 0;
+  gap: 22px 0;
+}
+
+.tip-item {
+  width: 146px;
+  height: 48px;
+  font-size: 24px;
+  color: white;
+  background-color: #00474b;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.tip-custom {
+  background-color: #f3f9fa;
+  color: #00474b;
+}
+
+.tip-custom:hover {
+  border: 2px solid #26c2ae;
+}
+
+.results {
+  width: 100%;
+  background-color: #00474b;
+  padding: 39px 23px 12px;
+  border-radius: 15px;
+  display: flex;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 60px;
+}
+
+.row__text {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-size: 16px;
+}
+
+.row__text span {
+  font-size: 13px;
+  color: #7f9d9f;
+}
+
+.amount {
+  font-size: 32px;
+  color: #26c2ae;
+}
+
+.reset {
+  width: 100%;
+  text-align: center;
+  padding: 9px 0;
+  margin-top: 25px;
+  background-color: #26c2ae;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.people-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.error {
+  font-size: 10px;
+  color: red;
+  display: none;
+}
+
+.error-border {
+  border: 2px solid #e17052;
+}
+
+.selected {
+  color: black;
+  background-color: #26c2ae;
+}
