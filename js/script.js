@@ -49,6 +49,21 @@ function calculateTip() {
   }
 }
 
+function reset() {
+  billInput.value = 0;
+
+  tips.forEach(val => {
+    val.classList.remove("selected");
+  });
+
+  peopleQty.value = 0;
+
+  tipForPerson.innerHTML = "$0.00";
+  totalForPerson.innerHTML = "$0.00";
+}
+
+resetBtn.addEventListener("click", reset);
+
 billInput.addEventListener("input", getBill);
 peopleQty.addEventListener("input", peopleInput);
 tips.forEach(tipItem => {
