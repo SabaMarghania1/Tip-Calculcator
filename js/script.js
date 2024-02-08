@@ -31,7 +31,7 @@ function peopleInput() {
 function handleClick(e) {
   tips.forEach(val => {
     val.classList.remove("selected");
-    if (e.target.innerHTML == val.innerHTML) {
+    if (e.target.innerHTML === val.innerHTML) {
       val.classList.add("selected");
       tipValue = parseFloat(val.dataset.value);
     }
@@ -60,10 +60,12 @@ function reset() {
 
   tipForPerson.innerHTML = "$0.00";
   totalForPerson.innerHTML = "$0.00";
+
+  peopleQty.classList.remove("error-border");
+  error.style.display = "none";
 }
 
 resetBtn.addEventListener("click", reset);
-
 billInput.addEventListener("input", getBill);
 peopleQty.addEventListener("input", peopleInput);
 tips.forEach(tipItem => {
